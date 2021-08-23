@@ -22,5 +22,5 @@ steps:
 - script: composer install --no-interaction --prefer-dist
   displayName: 'composer install'
   
-  - script: ./phpunit
+ - script: ./phpunit
   displayName: 'Run tests with phpunit'
