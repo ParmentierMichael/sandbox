@@ -11,7 +11,6 @@ class Example_Test extends TestCase
      */
     public function testBasicExample()
     {
-        echo 'ok';
         $this->assertEquals(true,true);
     }
 }
