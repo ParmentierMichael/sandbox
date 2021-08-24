@@ -40,6 +40,5 @@ steps:
 - task: PublishTestResults@2
   inputs:
     testResultsFormat: 'JUnit'
-    testResultsFiles: 'phpunit.xml'
-   # mergeTestResults: true
-   # failTaskOnFailedTests: true
+    testResultsFiles: '**/TEST-*.xml'
+    failTaskOnFailedTests: true
