@@ -13,4 +13,16 @@ class Example_Test extends TestCase
     {
         $this->assertEquals(true,true);
     }
+    
+    /**
+     * A basic functional test example.
+     *
+     * @return void
+     */
+    public function testBasicExample2()
+    {
+        $this->assertEquals(true,true);
+        $this->assertEquals(false, false);
+    }
+    
 }
