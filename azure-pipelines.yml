@@ -34,6 +34,6 @@ steps:
 - task: PublishTestResults@2
   inputs:
     testResultsFormat: 'JUnit'
-    testResultsFiles: '**/TEST-*.xml'
-    mergeTestResults: true
-    failTaskOnFailedTests: true
+    testResultsFiles: '*Test*.xml'
+   # mergeTestResults: true
+   # failTaskOnFailedTests: true
