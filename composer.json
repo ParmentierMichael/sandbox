@@ -51,8 +51,6 @@
             "tests/TestCase.php"
         ]
     },
-    "scripts": {
-    },
     "config": {
         "preferred-install": "dist"
     },
