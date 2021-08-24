@@ -22,3 +22,6 @@ steps:
 
 - script: composer install
   displayName: 'composer install'
+
+- script: ./phpunit
+  displayName: 'Run tests with phpunit'
