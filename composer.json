@@ -2,14 +2,5 @@
     "name": "pipelinesphp",
     "description": "Sample application that uses laravel",
     "keywords": ["framework", "laravel"],
-    "type": "project",
-    "require": {
-        "php": ">=5.5.9"
-    },
-    "require-dev": {
-        "fzaninotto/faker": "~1.4"
-    },
-    "config": {
-        "preferred-install": "dist"
-    }
+    "type": "project"
 }
