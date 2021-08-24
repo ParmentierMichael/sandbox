@@ -26,7 +26,7 @@ steps:
 - script: ls -al
   displayName: 'dir'
 
-- script: sudo phpunit
+- script: sudo phpunit --filter testBasicExample tests/Example_Test.php
   displayName: 'Run tests with phpunit'
 
 - task: ArchiveFiles@2
