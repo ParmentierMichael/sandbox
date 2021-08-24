@@ -23,5 +23,5 @@ steps:
 - script: composer install
   displayName: 'composer install'
 
-- script: sudo ./phpunit
+- script: sudo phpunit
   displayName: 'Run tests with phpunit'
