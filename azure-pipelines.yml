@@ -29,7 +29,7 @@ steps:
 - script: pwd
   displayName: 'pwd'
 
-- script: sudo phpunit --filter testBasicExample tests/Example_Test.php
+- script: sudo phpunit --filter testBasicExample /home/vsts/work/1/s/tests/Example_Test.php
   displayName: 'Run tests with phpunit'
 
 - task: ArchiveFiles@2
