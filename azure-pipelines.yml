@@ -23,6 +23,9 @@ steps:
 - script: composer install
   displayName: 'composer install'
 
+- script: ls -al
+  displayName: 'dir'
+
 - script: sudo phpunit
   displayName: 'Run tests with phpunit'
 
