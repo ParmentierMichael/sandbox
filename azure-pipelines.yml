@@ -21,15 +21,14 @@ steps:
     php -version
     echo "------------------------------"
     php -i
-    sudo php -d memory_limit=256M
   displayName: 'Use PHP version $(phpVersion)'
 
 - script: composer install
   displayName: 'composer install'
 
 - script: |
-    sudo phpunit --filter testBasicExample Example_Test /home/vsts/work/1/s/tests/Example_Test.php --coverage-xml /home/vsts/work/1/s/tests/
-    sudo phpunit --filter testBasicExample2 Example_Test /home/vsts/work/1/s/tests/Example_Test.php --coverage-xml /home/vsts/work/1/s/tests/
+    sudo phpunit --filter testBasicExample Example_Test /home/vsts/work/1/s/tests/Example_Test.php --log-junit /home/vsts/work/1/s/tests/tttt.xml
+    sudo phpunit --filter testBasicExample2 Example_Test /home/vsts/work/1/s/tests/Example_Test.php --log-junit /home/vsts/work/1/s/tests/rrrr.xml
   displayName: 'Run tests with phpunit'
 
 - task: ArchiveFiles@2
