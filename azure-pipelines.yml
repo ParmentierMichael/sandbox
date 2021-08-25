@@ -25,8 +25,8 @@ steps:
   displayName: 'composer install'
 
 - script: |
-    sudo phpunit --filter testBasicExample Example_Test /home/vsts/work/1/s/tests/Example_Test.php
-    sudo phpunit --filter testBasicExample2 Example_Test /home/vsts/work/1/s/tests/Example_Test.php
+    sudo phpunit --filter testBasicExample Example_Test /home/vsts/work/1/s/tests/Example_Test.php --coverage-xml /home/vsts/work/1/s/tests/
+    sudo phpunit --filter testBasicExample2 Example_Test /home/vsts/work/1/s/tests/Example_Test.php --coverage-xml /home/vsts/work/1/s/tests/
   displayName: 'Run tests with phpunit'
 
 - task: ArchiveFiles@2
