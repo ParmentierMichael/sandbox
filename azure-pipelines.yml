@@ -25,9 +25,10 @@ steps:
 
 
 
-- script: |
-    sudo phpunit --filter testBasicExample Example_Test $(System.DefaultWorkingDirectory)/tests/Example_Test.php --log-junit $(System.DefaultWorkingDirectory)/tests/tttt.xml
-    sudo phpunit --filter testBasicExample2 Example_Test $(System.DefaultWorkingDirectory)/tests/Example_Test.php --log-junit $(System.DefaultWorkingDirectory)/tests/rrrr.xml
+- script: 
+    sudo phpunit --filter testBasicExample Example_Test $(System.DefaultWorkingDirectory)/tests/Example_Test.php 
+                 --log-junit $(System.DefaultWorkingDirectory)/tests/tttt.xml
+    
   displayName: 'Run tests with phpunit'
 
 - task: PublishTestResults@2
@@ -38,10 +39,11 @@ steps:
     failTaskOnFailedTests: true
           
 
-- task: PublishCodeCoverageResults@1
-  inputs:
-    codeCoverageTool: 'JaCoCo'
-    summaryFileLocation: '$(System.DefaultWorkingDirectory)/tests/*.xml'
+#- task: PublishCodeCoverageResults@1
+#  inputs:
+#    codeCoverageTool: 'JaCoCo'
+#    summaryFileLocation: '$(System.DefaultWorkingDirectory)/tests'
+
 
 - task: ArchiveFiles@2
   inputs:
