@@ -19,7 +19,7 @@ steps:
     sudo update-alternatives --set php-cgi /usr/bin/php-cgi$(phpVersion)
     sudo update-alternatives --set phar.phar /usr/bin/phar.phar$(phpVersion)
     php -version
-    php -d xdebug.mode=coverage
+    php -d memory_limit=256M
     php -i
   displayName: 'Use PHP version $(phpVersion)'
 
