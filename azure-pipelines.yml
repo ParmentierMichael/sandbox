@@ -38,7 +38,7 @@ steps:
   inputs:
     rootFolderOrFile: '$(system.defaultWorkingDirectory)'
     includeRootFolder: false
-- task: PublishBuildArtifacts@1
+#- task: PublishBuildArtifacts@1
 - task: PublishTestResults@2
   inputs:
     testResultsFormat: 'JUnit'
