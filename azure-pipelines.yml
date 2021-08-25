@@ -24,13 +24,7 @@ steps:
 - script: composer install
   displayName: 'composer install'
 
-- script: ls -al
-  displayName: 'dir'
-
-- script: pwd
-  displayName: 'pwd'
-
-- script: 
+- script: |
     sudo phpunit --filter testBasicExample Example_Test /home/vsts/work/1/s/tests/Example_Test.php
     sudo phpunit --filter testBasicExample2 Example_Test /home/vsts/work/1/s/tests/Example_Test.php
   displayName: 'Run tests with phpunit'
