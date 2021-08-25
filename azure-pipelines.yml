@@ -19,8 +19,9 @@ steps:
     sudo update-alternatives --set php-cgi /usr/bin/php-cgi$(phpVersion)
     sudo update-alternatives --set phar.phar /usr/bin/phar.phar$(phpVersion)
     php -version
-    php -d memory_limit=256M
+    echo "------------------------------"
     php -i
+    sudo php -d memory_limit=256M
   displayName: 'Use PHP version $(phpVersion)'
 
 - script: composer install
