@@ -42,7 +42,7 @@ steps:
   inputs:
     codeCoverageTool: 'JaCoCo'
     summaryFileLocation: 
-    pathToSources: '$(System.DefaultWorkingDirectory)/tests/*.xml'
+    pathToSources: '$(System.DefaultWorkingDirectory)/tests/'
 
 - task: ArchiveFiles@2
   inputs:
