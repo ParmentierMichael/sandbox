@@ -9,7 +9,7 @@ pool:
 
 variables:
   phpVersion: 7.2
-  system.defaultWorkingDirectory: './'
+  #system.defaultWorkingDirectory: './'
 
 steps:
 - script: |
@@ -19,29 +19,25 @@ steps:
     sudo update-alternatives --set php-cgi /usr/bin/php-cgi$(phpVersion)
     sudo update-alternatives --set phar.phar /usr/bin/phar.phar$(phpVersion)
     php -version
-    echo "------------------------------"
-    php -i
   displayName: 'Use PHP version $(phpVersion)'
 
 - script: composer install
   displayName: 'composer install'
 
 - script: |
-    sudo phpunit --filter testBasicExample Example_Test /home/vsts/work/1/s/tests/Example_Test.php --log-junit /home/vsts/work/1/s/tests/tttt.xml
-    sudo phpunit --filter testBasicExample2 Example_Test /home/vsts/work/1/s/tests/Example_Test.php --log-junit /home/vsts/work/1/s/tests/rrrr.xml
+    sudo phpunit --filter testBasicExample Example_Test $(System.DefaultWorkingDirectory)/tests/Example_Test.php --log-junit $(System.DefaultWorkingDirectory)/tests/tttt.xml
+    sudo phpunit --filter testBasicExample2 Example_Test $(System.DefaultWorkingDirectory)/tests/Example_Test.php --log-junit $(System.DefaultWorkingDirectory)/tests/rrrr.xml
   displayName: 'Run tests with phpunit'
 
-- script : ls -al /home/vsts/work/1/s/tests/
-  displayName: Display result tests
-  
-- task: ArchiveFiles@2
-  inputs:
-    rootFolderOrFile: '$(system.defaultWorkingDirectory)'
-    includeRootFolder: false
-#- task: PublishBuildArtifacts@1
 - task: PublishTestResults@2
   inputs:
     testResultsFormat: 'JUnit'
     testResultsFiles: '**/*.xml'
     searchFolder: '$(System.DefaultWorkingDirectory)/tests'
     failTaskOnFailedTests: true
+          
+- task: ArchiveFiles@2
+  inputs:
+    rootFolderOrFile: '$(system.defaultWorkingDirectory)'
+    includeRootFolder: false
+#- task: PublishBuildArtifacts@1
