@@ -27,7 +27,8 @@ steps:
 
 - script: 
     sudo phpunit --filter testBasicExample Example_Test $(System.DefaultWorkingDirectory)/tests/Example_Test.php 
-                 --log-junit $(System.DefaultWorkingDirectory)/tests/tttt.xml
+                 --log-junit $(System.DefaultWorkingDirectory)/tests/tests-report.xml
+                 --coverage-xml $(System.DefaultWorkingDirectory)/tests/coverage-report.xml
     
   displayName: 'Run tests with phpunit'
 
@@ -37,7 +38,9 @@ steps:
     testResultsFiles: '**/*.xml'
     searchFolder: '$(System.DefaultWorkingDirectory)/tests'
     failTaskOnFailedTests: true
-          
+
+- script: ls -al
+  displayName: 'Listing elt'        
 
 #- task: PublishCodeCoverageResults@1
 #  inputs:
