@@ -31,6 +31,9 @@ steps:
     sudo phpunit --filter testBasicExample2 Example_Test /home/vsts/work/1/s/tests/Example_Test.php --log-junit /home/vsts/work/1/s/tests/rrrr.xml
   displayName: 'Run tests with phpunit'
 
+- script : ls -al /home/vsts/work/1/s/tests/
+  displayName: Display result tests
+  
 - task: ArchiveFiles@2
   inputs:
     rootFolderOrFile: '$(system.defaultWorkingDirectory)'
