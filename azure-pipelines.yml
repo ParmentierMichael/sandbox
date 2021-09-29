@@ -20,6 +20,9 @@ steps:
     php -version
   displayName: 'Use PHP version $(phpVersion)'
 
+- script: mysql --version
+  displayName: 'version de MySQL'
+  
 - script: composer install
   displayName: 'composer install'
 
