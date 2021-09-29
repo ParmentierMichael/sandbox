@@ -22,6 +22,9 @@ steps:
 
 - script: mysql --version
   displayName: 'version de MySQL'
+
+- script: mysql -u hhhh -ppassword < dump-moodle.sql
+  displayName: 'Création et import de la bdd moodle'
   
 - script: composer install
   displayName: 'composer install'
