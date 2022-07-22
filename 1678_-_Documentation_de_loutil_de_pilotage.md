@@ -1,8 +1,8 @@
-# M@gistère 
+#                          M@gistère 
 
-# Documentation des statistiques de la plateforme de pilotage 
+#       Documentation des statistiques de la plateforme de pilotage 
 
-# 10/06/2022
+#                          10/06/2022
 
 
 
