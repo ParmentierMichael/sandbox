@@ -1,12 +1,15 @@
-<h1 style="text-align: center;">M@gistère</h1>
+# M@gistère 
 
-<p style="text-align: center;">Documentation des statistiques de la plateforme de pilotage</p>
+# Documentation des statistiques de la plateforme de pilotage 
 
-<p style="text-align: center;">10/06/2022</p>
+# 10/06/2022
 
-<div style="page-break-after: always;"></div>
+
 
 # Sommaire
+- [M@gistère](#mgistère)
+- [Documentation des statistiques de la plateforme de pilotage](#documentation-des-statistiques-de-la-plateforme-de-pilotage)
+- [10/06/2022](#10062022)
 - [Sommaire](#sommaire)
 - [Introduction](#introduction)
 - [Vue globale - Répartition des formations par domaines](#vue-globale---répartition-des-formations-par-domaines)
@@ -2585,76 +2588,4 @@ ue.enrolid) WHERE e.courseid = c.id AND e.enrol = 'self' AND e.name LIKE 'GAIA%'
 FROM {course} c
 WHERE c.id = [COURSEID]
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
